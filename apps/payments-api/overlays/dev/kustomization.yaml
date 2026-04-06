@@ -7,4 +7,4 @@ patches:
   - path: deployment-patch.yaml
 images:
   - name: ghcr.io/siddhant412/payments-api
-    newTag: latest
+    newTag: 4c967de3fa11f17a43464f81cb9426938215be71
