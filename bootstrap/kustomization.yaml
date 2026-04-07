@@ -4,3 +4,4 @@ resources:
   - namespaces/dev.yaml
   - namespaces/staging.yaml
   - projects/platform-dev.yaml
+  - root-app.yaml
