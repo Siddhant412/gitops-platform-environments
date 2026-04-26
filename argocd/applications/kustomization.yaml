@@ -3,3 +3,5 @@ kind: Kustomization
 resources:
   - payments-api-dev.yaml
   - payments-api-staging.yaml
+  - orders-api-dev.yaml
+  - orders-api-staging.yaml

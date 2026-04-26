@@ -1,0 +1,10 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: dev
+resources:
+  - ../../base
+patches:
+  - path: deployment-patch.yaml
+images:
+  - name: ghcr.io/siddhant412/orders-api
+    newTag: 28633667105a47e514fc48583d7e89203f55cc4a

@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: orders-api
+spec:
+  replicas: 2
+  template:
+    spec:
+      containers:
+        - name: orders-api
+          env:
+            - name: NODE_ENV
+              value: staging

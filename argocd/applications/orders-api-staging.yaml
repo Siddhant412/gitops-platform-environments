@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: orders-api-staging
+  namespace: argocd
+spec:
+  project: platform-dev
+  source:
+    repoURL: https://github.com/Siddhant412/gitops-platform-environments.git
+    targetRevision: HEAD
+    path: apps/orders-api/overlays/staging
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: staging
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
